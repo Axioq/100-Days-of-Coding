@@ -35,7 +35,7 @@ computer = rps_list[computer_choice]
 human_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors."))
 human = rps_list[human_choice]
 
-print(human)
+print(f"You chose:\n{human}")
 print(f"Computer chose:\n{computer}")
 if computer_choice == 0 and human_choice == 2:
     print("You lose")
