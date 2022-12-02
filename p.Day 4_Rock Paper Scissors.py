@@ -35,7 +35,7 @@ computer_choice = random.randint(0,choice-1)
 computer = rps_list[computer_choice]
 human_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors."))
 
-if human_choice > 2:
+if human_choice > 2 or human_choice < 0:
     human_choice = 3
     rps_list.append("INVALID NUMBER")
 human = rps_list[human_choice]
