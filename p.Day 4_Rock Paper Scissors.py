@@ -1,4 +1,5 @@
 # Rock Paper Scissors Game -
+
 import random
 
 rock = '''
@@ -33,6 +34,10 @@ choice = len(rps_list)
 computer_choice = random.randint(0,choice-1)
 computer = rps_list[computer_choice]
 human_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors."))
+
+if human_choice > 2:
+    human_choice = 3
+    rps_list.append("INVALID NUMBER")
 human = rps_list[human_choice]
 
 print(f"You chose:\n{human}")
@@ -45,5 +50,8 @@ elif computer_choice == 2 and human_choice == 1:
     print("You lose")
 elif computer_choice == human_choice:
     print ("Draw")
+elif human_choice > 2:
+    print("You chose an invalid number. You are an idiot. You lose!")    
 else:
     print("You Win")
+
